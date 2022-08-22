@@ -6,16 +6,16 @@
 
 app.enableQE()
 
-var outputDirectory = new File("h:\\Pictures\\tag\\stabilized\\");
+var outputDirectory = new File("f:\\stabilized\\");
 //var outputDirectory  = Folder.selectDialog("Export to this folder");
-var presetName = "Copy of Match Source - High bitrate - Canon";
+var presetName = "Copy of Match Source - Adaptive High bitrate";
 
 if (!outputDirectory.exists) throw "Directory " + outputDirectory + " does not exist";
 
 // Standard presets path : C:\\Program Files\\Adobe\\Adobe Premiere Pro 2021\\Settings\\IngestPresets\\Transcode\\
 // Custom presets path   : D:\\Documents\\Adobe\\Adobe Media Encoder\\15.0\\Presets\\
 //var encoderPresetFile = new File("C:\\Program Files\\Adobe\\Adobe Premiere Pro 2021\\Settings\\IngestPresets\\Transcode\\Match Source - H.264 High Bitrate.epr")
-var encoderPresetFile = new File("D:\\Documents\\Adobe\\Adobe Media Encoder\\15.0\\Presets\\" + presetName + ".epr")
+var encoderPresetFile = new File("c:\\Users\\julia\\Documents\\Adobe\\Adobe Media Encoder\\22.0\\Presets\\" + presetName + ".epr")
 if (!encoderPresetFile.exists) throw "Encoder preset " + encoderPresetPath + " does not exist"
 
 app.encoder.launchEncoder()
